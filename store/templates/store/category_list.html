@@ -1,0 +1,8 @@
+<h1>All Categories</h1>
+<ul>
+  {% for category in categories %}
+    <li>
+      <a href="{% url 'store:books_by_category' category.name %}">{{ category.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

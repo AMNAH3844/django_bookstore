@@ -1,0 +1,8 @@
+<h1>Books in {{ category.name }}</h1>
+{% for book in books %}
+  <div>
+    <h2>{{ book.title }}</h2>
+    <p>By {{ book.author }}</p>
+    <p>Price: ${{ book.price }}</p>
+  </div>
+{% endfor %}

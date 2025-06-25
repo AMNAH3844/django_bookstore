@@ -1,0 +1,10 @@
+<h1>Featured Books</h1>
+{% for book in books %}
+  <div>
+    <h2>{{ book.title }}</h2>
+    <p>By {{ book.author }}</p>
+    <p>Price: ${{ book.price }}</p>
+    <p>Category: {{ book.category.name }}</p>
+    <a href="{% url 'store:book_detail' book.id %}">View Details</a>
+  </div>
+{% endfor %}
