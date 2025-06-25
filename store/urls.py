@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+app_name = 'store'  # ✅ Must be placed ABOVE urlpatterns
+
 urlpatterns = [
     path('', views.home, name='home'),  # Home page
     path('book/<int:book_id>/', views.book_detail, name='book_detail'),  # Book detail page

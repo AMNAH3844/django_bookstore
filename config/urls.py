@@ -3,5 +3,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('store.urls')),  # All store views will go through here
+    path('', include('store.urls')), 
+
+    path('admin/', admin.site.urls),
+    path('', include('store.urls', namespace='store')),  # ✅ Namespace is required here
 ]
+
